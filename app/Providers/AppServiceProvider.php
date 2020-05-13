@@ -16,17 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('User', function ($app) {
-            return new UserService();
-        });
 
-        $this->app->singleton('Organization', function ($app) {
-            return new OrganizationService();
-        });
-
-        $this->app->singleton('Ticket', function ($app) {
-            return new TicketService();
-        });
     }
 
     /**
