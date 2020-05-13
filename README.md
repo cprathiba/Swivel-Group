@@ -24,10 +24,10 @@ Generate a new application key
 
     php artisan key:generate
 
-# Testing
+## Testing
 	
 	./vendor/bin/phpunit
 	
-# Run the Search Application
+## Run the Search Application
 
 	php artisan search:start
