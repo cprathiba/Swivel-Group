@@ -22,7 +22,7 @@ class TicketRepository extends BaseRepository implements TicketRepositoryInterfa
 
     public function __construct(TicketService $service)
     {
-        $orgJsonPath = storage_path() . env('FILE_STORAGE') .self::TICKET .'.json';
+        $orgJsonPath = storage_path() . self::STORAGE_PATH .self::TICKET .'.json';
         $service->collectTickets = collect(json_decode(file_get_contents($orgJsonPath), true));
         parent::__construct($service);
     }

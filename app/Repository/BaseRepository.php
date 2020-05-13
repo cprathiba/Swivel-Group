@@ -11,6 +11,8 @@ class BaseRepository implements BaseRepositoryInterface
      */
     public $service;
 
+    public const STORAGE_PATH = '/store/';
+
     /**
      * BaseRepository constructor.
      * @param $service

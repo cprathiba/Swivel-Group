@@ -17,7 +17,7 @@ class OrganizationRepository extends BaseRepository implements OrganizationRepos
 
     public function __construct(OrganizationService $service)
     {
-        $orgJsonPath = storage_path() . env('FILE_STORAGE') .self::ORGANIZATION .'.json';
+        $orgJsonPath = storage_path() . self::STORAGE_PATH .self::ORGANIZATION .'.json';
         $service->collectOrg = collect(json_decode(file_get_contents($orgJsonPath), true));
         parent::__construct($service);
     }

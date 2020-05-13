@@ -15,7 +15,7 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
 
     public function __construct(UserService $service)
     {
-        $orgJsonPath = storage_path() . env('FILE_STORAGE') .self::USER .'.json';
+        $orgJsonPath = storage_path() . self::STORAGE_PATH .self::USER .'.json';
         $service->collectUsers = collect(json_decode(file_get_contents($orgJsonPath), true));
         parent::__construct($service);
     }
